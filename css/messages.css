@@ -13,8 +13,11 @@ div.status,
 div.warning,
 div.error /* Important messages (status, warning, and error) for the user */ {
   min-height: 21px;
-  margin: 0 1em 5px 1em;
+  margin: 0 0 5px;
   border: 2px solid #ff7;
+  border-image: url(../images/box2.png) 30/15px stretch stretch;
+  -moz-border-image: url(../images/box2.png) 30/15px stretch stretch;
+  -webkit-border-image: url(../images/box2.png) 30/15px stretch stretch;
   padding: 5px 5px 5px 35px; /* LTR */
   color: #000;
   background-color: #ffc;
