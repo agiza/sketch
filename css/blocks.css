@@ -18,15 +18,15 @@
 }
 
 .block.odd /* Zebra striping independent of each region */ {
-  border-image: url(../images/box1.png) 30/15px round round;
-  -moz-border-image: url(../images/box1.png) 30/15px round round;
-  -webkit-border-image: url(../images/box1.png) 30/15px round round;
+  border-image: url(../images/box1.png) 30/15px stretch stretch;
+  -moz-border-image: url(../images/box1.png) 30/15px stretch stretch;
+  -webkit-border-image: url(../images/box1.png) 30/15px stretch stretch;
 }
 
 .block.even /* Zebra striping independent of each region */ {
-  border-image: url(../images/box2.png) 30/15px round round;
-  -moz-border-image: url(../images/box2.png) 30/15px round round;
-  -webkit-border-image: url(../images/box2.png) 30/15px round round;
+  border-image: url(../images/box2.png) 30/15px stretch stretch;
+  -moz-border-image: url(../images/box2.png) 30/15px stretch stretch;
+  -webkit-border-image: url(../images/box2.png) 30/15px stretch stretch;
 }
 
 .region-count-1 /* Incremental count for each block in the region */ {

@@ -175,9 +175,9 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 #content-area /* Wrapper for the actual page content */ {
-  border-image: url(../images/box1.png) 30/15px round round;
-  -moz-border-image: url(../images/box1.png) 30/15px round round;
-  -webkit-border-image: url(../images/box1.png) 30/15px round round;
+  border-image: url(../images/box1.png) 30/15px stretch stretch;
+  -moz-border-image: url(../images/box1.png) 30/15px stretch stretch;
+  -webkit-border-image: url(../images/box1.png) 30/15px stretch stretch;
 }
 
 ul.links /* List of links */ {
