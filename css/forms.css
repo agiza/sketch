@@ -5,6 +5,28 @@
  * Form Styling
  */
 
+fieldset {
+  border: none;
+  border-image: url("../images/box1.png") 30 / 5px stretch stretch;
+  -moz-border-image: url("../images/box1.png") 30 / 5px stretch stretch;
+  -webkit-border-image: url("../images/box1.png") 30 / 5px stretch stretch;
+}
+
+fieldset.collapsed {
+  border-image: none;
+  -moz-border-image: none;
+  -webkit-border-image: none;
+}
+
+input.form-text,
+input.textarea,
+input.form-file {
+  border: none;
+  border-image: url("../images/box2.png") 30 / 5px stretch stretch;
+  -moz-border-image: url("../images/box2.png") 30 / 5px stretch stretch;
+  -webkit-border-image: url("../images/box2.png") 30 / 5px stretch stretch;
+  font-size: 1em;
+}
 
 .form-item,
 .form-checkboxes,
@@ -42,6 +64,29 @@
 }
 
 .form-submit /* The submit button */ {
+}
+
+input.form-submit, input.form-button {
+  font-size: 1em;
+  border: none;
+  display: inline-block;
+  margin-top: .75em;
+  text-decoration: none;
+  border: none;
+  border-image: url("../images/box2.png") 30 / 5px stretch stretch;
+  -moz-border-image: url("../images/box2.png") 30 / 5px stretch stretch;
+  -webkit-border-image: url("../images/box2.png") 30 / 5px stretch stretch;
+  position: relative;
+  cursor: pointer;
+}
+
+input.form-submit:hover, input.form-button:hover {
+  top: -1px;
+}
+
+input.form-submit:active, input.form-button:active {
+  top: 1px;
+  outline: none;
 }
 
 .container-inline div,
