@@ -20,7 +20,8 @@ fieldset.collapsed {
 
 input.form-text,
 input.textarea,
-input.form-file {
+input.form-file,
+select {
   border: none;
   border-image: url("../images/box2.png") 30 / 5px stretch stretch;
   -moz-border-image: url("../images/box2.png") 30 / 5px stretch stretch;
@@ -70,7 +71,6 @@ input.form-submit, input.form-button {
   font-size: 1em;
   border: none;
   display: inline-block;
-  margin-top: .75em;
   text-decoration: none;
   border: none;
   border-image: url("../images/box2.png") 30 / 5px stretch stretch;
