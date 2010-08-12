@@ -152,3 +152,47 @@ function sketch_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+
+/**
+ * this is a kludge to fix the problem with Context
+ * see http://drupal.org/node/634552
+ */
+function sketch_blocks($region, $show_blocks = NULL) {
+
+    if (module_exists("context")){
+     
+      // Since Drupal 6 doesn't pass $show_blocks to theme_blocks, we manually call
+      // theme('blocks', NULL, $show_blocks) so that this function can remember the
+      // value on later calls.
+      static $render_sidebars = TRUE;
+      if (!is_null($show_blocks)) {
+        $render_sidebars = $show_blocks;
+      }
+     
+      // Bail if this region is disabled.
+      //$disabled_regions = context_active_values('theme_regiontoggle');
+      //if (!empty($disabled_regions) && in_array($region, $disabled_regions)) {
+        //return '';
+      //}
+
+      // If zen_blocks was called with a NULL region, its likely we were just
+      // setting the $render_sidebars static variable.
+      if ($region) {
+        $output = '';
+
+        $plugin = context_get_plugin('reaction', 'block');
+   
+        // Add any content assigned to this region through drupal_set_content() calls.
+        $output .= $plugin->execute($region);
+   
+        $elements['#children'] = $output;
+        $elements['#region'] = $region;
+   
+        return $output ? theme('region', $elements) : '';
+      }
+    }
+    else {
+        return zen_blocks($region, $show_blocks);
+    }
+}
