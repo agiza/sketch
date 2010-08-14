@@ -86,9 +86,12 @@ function sketch_theme(&$existing, $type, $theme, $path) {
  */
 /* -- Delete this line if you want to use this function
 function sketch_preprocess(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+function sketch_preprocess_panels_pane(&$vars) {
+  $vars['classes_array'][] = $vars['zebra'];
+}
 
 /**
  * Override or insert variables into the page templates.
@@ -98,7 +101,7 @@ function sketch_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
+/*
 function sketch_preprocess_page(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
